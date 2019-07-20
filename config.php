@@ -1,9 +1,9 @@
 <?php
 
 define("SERVER","localhost");
-define("USER","karan");
-define("PASSWORD","karan");
-define("DB","proj");
+define("USER","root");
+define("PASSWORD","");
+define("DB","finproject");
 define("BASE_SERVER","localhost");
 
 ?>
