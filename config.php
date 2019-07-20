@@ -6,4 +6,5 @@ define("PASSWORD","");
 define("DB","finproject");
 define("BASE_SERVER","localhost");
 
+
 ?>
