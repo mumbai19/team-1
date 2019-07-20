@@ -22,10 +22,10 @@ require_once("connect.php");
 $id = 1;
 ?>
         <div class="right_col" role="main">
-            <div class="">
+            <div class="container">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>My Issued Books</h3>
+                        <h3>Students</h3>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@ $id = 1;
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>My issued books</h2>
+<!--                                <h2>Students</h2>-->
 
                                 <div class="clearfix"></div>
                             </div>
@@ -54,22 +54,27 @@ $id = 1;
 -->
                                     
                                     <?php  
-$query = "SELECT sid FROM student_course_map, course_user_map, student WHERE 
-          student_course_map.sid=student.sid and student_course_map.cid=course_user_map.cid and course_user_map=$id";
+$query = "SELECT studentdetails.sid, studentdetails.name FROM student_course, course_user_master, studentdetails WHERE 
+student_course.sid=studentdetails.sid and student_course.courseid=course_user_master.courseid and course_user_master.uid=$id";
 
-$select_student_details = mysqli_query($connection,$query);
+//                                    
+//                                    echo $query;
+//                                    die();
+
+$res = mysqli_query($connection,$query);
+
 
 while($row=mysqli_fetch_assoc($res)){
     echo "<tr>";
     echo "<td>";
-    echo $row["student_id"];
+    echo $row["sid"];
     echo "</td>";
     echo "<td>";
-    echo $row["books_name"];
+    echo $row["name"];
     echo "</td>";
-    echo "<td>";
-    echo $row["books_issue_date"];
-    echo "</td>";
+//    echo "<td>";
+//    echo $row["books_issue_date"];
+//    echo "</td>";
 }
                                     
                                     ?>
@@ -80,6 +85,7 @@ while($row=mysqli_fetch_assoc($res)){
                                 
                                 
                             </div>
+                            <button type="button" class="btn btn-success">Success</button>
                         </div>
                     </div>
                 </div>
@@ -93,3 +99,7 @@ while($row=mysqli_fetch_assoc($res)){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+
