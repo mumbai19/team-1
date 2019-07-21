@@ -19,7 +19,7 @@
 	
 	if(mysqli_num_rows($result)>0){
 		$row = mysqli_fetch_assoc($result);
-		$fetchedUsername = $row["username"];
+		$fetchedUsername = $row["uid"];
 		//$fetchedPassword = $row["password"];
 		$role = $row["role"];
 		$_SESSION['username'] = $fetchedUsername;

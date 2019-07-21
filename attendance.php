@@ -1,316 +1,141 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<title>Attendance</title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<!------ Include the above in your HEAD tag ---------->
+<?php
+session_start();
+$username = $_SESSION['username'];
+?>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
+<link href="/IndexPage/img/favicon.png" rel="icon">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<title>Agency - Start Bootstrap Theme</title>
+
+<!-- Bootstrap core CSS -->
+<link href="IndexPage/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+
+
+<!-- Custom fonts for this template -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+<!-- <link href="IndexPage/vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css"> -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Custom styles for this template -->
+<link href="IndexPage/css/style.css" rel="stylesheet">
+<link href="IndexPage/css/agency.css" rel="stylesheet">
 <style>
-html {
-    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  
 }
 
-.table {
-    border: none;
+th, td {
+  text-align: center;
+  padding: 8px;
 }
 
-.table-definition thead th:first-child {
-    pointer-events: none;
-    background: white;
-    border: none;
-}
 
-.table td {
-    vertical-align: middle;
-}
 
-.page-item > * {
-    border: none;
-}
-
-.custom-checkbox {
-  min-height: 1rem;
-  padding-left: 0;
-  margin-right: 0;
-  cursor: pointer; 
-}
-  .custom-checkbox .custom-control-indicator {
-    content: "";
-    display: inline-block;
-    position: relative;
-    width: 30px;
-    height: 10px;
-    background-color: #818181;
-    border-radius: 15px;
-    margin-right: 10px;
-    -webkit-transition: background .3s ease;
-    transition: background .3s ease;
-    vertical-align: middle;
-    margin: 0 16px;
-    box-shadow: none; 
-  }
-    .custom-checkbox .custom-control-indicator:after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      background-color: #f1f1f1;
-      border-radius: 21px;
-      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
-      left: -2px;
-      top: -4px;
-      -webkit-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
-      transition: left .3s ease, background .3s ease, box-shadow .1s ease; 
-    }
-  .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
-    background-color: #84c7c1;
-    background-image: none;
-    box-shadow: none !important; 
-  }
-    .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator:after {
-      background-color: #84c7c1;
-      left: 15px; 
-    }
-  .custom-checkbox .custom-control-input:focus ~ .custom-control-indicator {
-    box-shadow: none !important; 
-  }    
 </style>
 
-
 </head>
-<body>
 
-<main class="container pt-5">
-    <div class="mb-50 <l-200></l-200>">
-        <input type="date" />
-    </div> 
-       
-                     <!--
-        <div class="card mb-5">
-            <div class="card-header">Fearures</div>
-            <div class="card-block p-0">
-                <table class="table table-bordered table-sm m-0">
-                    <thead class="">
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Registration Date</th>
-                            <th>E-mail address</th>
-                            <th>Premium Plan</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input">
-                                    <span class="custom-control-indicator"></span>
-                                </label>
-                            </td>
-                            <td>John Lilki</td>
-                            <td>September 14, 2013</td>
-                            <td>jhlilk22@yahoo.com</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input">
-                                    <span class="custom-control-indicator"></span>
-                                </label>
-                            </td>
-                            <td>John Lilki</td>
-                            <td>September 14, 2013</td>
-                            <td>jhlilk22@yahoo.com</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input">
-                                    <span class="custom-control-indicator"></span>
-                                </label>
-                            </td>
-                            <td>John Lilki</td>
-                            <td>September 14, 2013</td>
-                            <td>jhlilk22@yahoo.com</td>
-                            <td>No</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="card-footer p-0">
-                <nav aria-label="...">
-                    <ul class="pagination justify-content-end mt-3 mr-3">
-                        <li class="page-item disabled">
-                            <span class="page-link">Previous</span>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
-                            <span class="page-link">2<span class="sr-only">(current)</span>
-                            </span>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <table class="table table-bordered table-definition mb-5">
-            <thead class="table-warning ">
+
+<body id="page-top" style="background-color: #140F20;">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<div class="container">
+
+			<a class="navbar-brand js-scroll-trigger" href="#page-top"> <img
+				src="IndexPage/img/favicon.png" class="navbar-logo" alt="" title="" />
+				Attendance
+			</a>
+
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+				data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			
+			</div> 
+		</div>
+	</nav>
+
+	<section>
+	
+	<div class="mb-50 <l-200></l-200>" style="text-align: center; margin: 10px; ">
+        <form action="AttendanceMark.php" method="post">
+		<input type="date" name="datee"/> 
+		<input type="submit" name="submit">
+		</form>
+    
+		
+	</div> 
+
+        <table  style="margin-left: auto; margin-right: auto;color: white;">
+            <thead>
                 <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Registration Date</th>
-                    <th>E-mail address</th>
-                    <th>Premium Plan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                    </td>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td>jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                    </td>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td>jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                    </td>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td>jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th colspan="4">
-                        <button class="btn btn-primary float-right">Add User</button>
-                        <button class="btn btn-default">Approve</button>
-                        <button class="btn btn-default">Approve All</button>
-                    </th>
-                </tr>
-            </tfoot>
-        </table>
-        -->
-        <table class="table table-sm">
-            <thead class="table-info">
-                <tr>
-                    <th></th>
+                    
                     <th>Student id</th>
                     <th>Student name</th>
-                    <th>Date</th>
+                    <!--<th>Date</th> -->
 <!--                    <th>E-mail address</th>-->
-                    <th>P/A</th>
+                    
                 </tr>
             </thead>
             <tbody>
-<!--
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                    </td>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td>jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                    </td>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td class="table-danger">jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                    </td>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td>jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
--->
+
+
 <?php
 $id = 1;
 //                <?php
-require_once("connect.php");
-
+require_once("config.php");
+$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 $query = "SELECT studentdetails.sid, studentdetails.name FROM studentcourse, course_user_master, studentdetails WHERE 
-        studentcourse.sid=studentdetails.sid and studentcourse.courseid=course_user_master.courseid and course_user_master.uid=$id";
-
+        studentcourse.sid=studentdetails.sid and studentcourse.courseid=course_user_master.courseid and course_user_master.uid='$username'";
 //                                    
 //                                    echo $query;
 //                                    die();
-
 $res = mysqli_query($connection,$query);
-
-
 while($row=mysqli_fetch_assoc($res)){
-    echo "<tr>";
-    echo "<td>
-            <label class='custom-control custom-checkbox'>
-                <input type='checkbox' class='custom-control-input'>
-                    <span class='custom-control-indicator'></span>
-            </label>
-        </td>";
-    
-    echo "<td>";
-    echo $row["sid"];
-    echo "</td>";
-    echo "<td>";
-    echo $row["name"];
-    echo "</td>";
-    echo "<td>";
-    echo $row["name"];
-    echo "</td>";
-    echo "<td>";
-    echo $row["name"];
-    echo "</td>";
-    
+	?>
+	<tr>
+	<td><?php echo $row["sid"];?></td>
+	
+	<td><?php echo $row["name"];?></td>
+	<td>
+            <input type="button" name="test" id="test" value="Mark"  onclick="" />
 
+        </td>
+	</tr>
     
-    //    echo "<td>";
-//    echo $row["books_issue_date"];
-//    echo "</td>";
+    
+        
+<?php
 }
                                     
 ?>
@@ -318,10 +143,25 @@ while($row=mysqli_fetch_assoc($res)){
             </tbody>
         </table>
         
-        <button type="button" class="btn btn-success">Success</button>
-    </main>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!--<button type="button" class="btn btn-success">MARK</button> -->
+    </section>
+<sc	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="IndexPage/vendor/jquery/jquery.min.js"></script>
+	<script src="IndexPage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="IndexPage/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Contact form JavaScript -->
+	<script src="IndexPage/js/jqBootstrapValidation.js"></script>
+	<script src="IndexPage/js/contact_me.js"></script>
+
+	<!-- Custom scripts for this template -->
+	<script src="IndexPage/js/agency.js"></script>
 
 </body>
+
 </html>

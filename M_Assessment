@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link href="/IndexPage/img/favicon.png" rel="icon">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<title>Agency - Start Bootstrap Theme</title>
+
+<!-- Bootstrap core CSS -->
+<link href="IndexPage/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+
+
+<!-- Custom fonts for this template -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+<!-- <link href="IndexPage/vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css"> -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Custom styles for this template -->
+<link href="IndexPage/css/style.css" rel="stylesheet">
+<link href="IndexPage/css/agency.css" rel="stylesheet">
+
+
+
+</head>
+
+<body id="page-top">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<div class="container">
+
+			<a class="navbar-brand js-scroll-trigger" href="#page-top"> <img
+				src="IndexPage/img/favicon.png" class="navbar-logo" alt="" title="" />
+				Ride With Me
+			</a>
+
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+				data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ml-auto">
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#services">How It Works</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#portfolio">Find Ride</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#about">Offer Ride</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#team">Sign Up</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#contact">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Header -->
+
+	<!-- Portfolio Grid -->
+	<section id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading text-uppercase"></h2>
+				</div>
+			</div>
+
+			<!--<div class="row">
+				<div class="col-md-4 col-sm-6 portfolio-item ">
+					<a class="portfolio-link" data-toggle="modal"
+						href="M_StudentList.php">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+
+						</div> <img class="img-fluid"
+						src="IndexPage/img/portfolio/1-thumbnail.jpg" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>Save Money</h4>
+						
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a class="portfolio-link" data-toggle="modal"
+						href="#portfolioModal2">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img class="img-fluid"
+						src="IndexPage/img/portfolio/2-thumbnail.jpg" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>Environment</h4>
+						
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a class="portfolio-link" data-toggle="modal"
+						href="#portfolioModal3">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img class="img-fluid"
+						src="IndexPage/img/portfolio/3-thumbnail.jpg" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>Good for You</h4>
+						
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a class="portfolio-link" data-toggle="modal"
+						href="#portfolioModal4">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img class="img-fluid"
+						src="IndexPage/img/portfolio/4-thumbnail.jpg" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>Public transport woes</h4>
+						
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a class="portfolio-link" data-toggle="modal"
+						href="#portfolioModal5">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img class="img-fluid"
+						src="IndexPage/img/portfolio/5-thumbnail.jpg" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>Make New Friends</h4>
+						
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a class="portfolio-link" data-toggle="modal"
+						href="#portfolioModal6">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img class="img-fluid"
+						src="IndexPage/img/portfolio/6-thumbnail.jpg" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>Reduce traffic</h4>
+						<!-- <p class="text-muted">Photography</p> 
+					</div>
+				</div>-->
+				<table>
+				
+				</table>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<!--==========================
+    Footer
+  ============================-->
+	
+	<!-- #footer -->
+
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="IndexPage/vendor/jquery/jquery.min.js"></script>
+	<script src="IndexPage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="IndexPage/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Contact form JavaScript -->
+	<script src="IndexPage/js/jqBootstrapValidation.js"></script>
+	<script src="IndexPage/js/contact_me.js"></script>
+
+	<!-- Custom scripts for this template -->
+	<script src="IndexPage/js/agency.js"></script>
+
+</body>
+
+</html>
