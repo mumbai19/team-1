@@ -115,7 +115,7 @@ $username = $_SESSION['username'];
 
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a class="portfolio-link" 
-						href="Attendance.php">
+						href="attendance.php">
 						<div class="portfolio-hover">
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
@@ -131,7 +131,7 @@ $username = $_SESSION['username'];
 
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a class="portfolio-link" 
-						href="#portfolioModal3">
+						href="stars.php">
 						<div class="portfolio-hover">
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
@@ -161,7 +161,7 @@ $username = $_SESSION['username'];
 				</div>
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a class="portfolio-link"
-						href="M_Assessment.php">
+						href="assessment.php">
 						<div class="portfolio-hover">
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>

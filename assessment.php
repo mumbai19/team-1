@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <?php 
+    session_start();
+    ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +21,7 @@
 
 <?php
 require_once("connect.php");
-session_start();
+//session_start();
 $id = $_SESSION['username'];
 ?>
         <div class="right_col" role="main">
@@ -39,7 +42,7 @@ $id = $_SESSION['username'];
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                
+<form action="assessment.php" type="submit" method="POST">
                                 <table class="table table-bordered">
                                     <th>
                                         Student id
@@ -47,14 +50,12 @@ $id = $_SESSION['username'];
                                     <th>
                                         Student name
                                     </th>
-<!--
-                                    <th>
-                                        Books issue date
-                                    </th>
--->
-                                    
-                                    <?php  
 
+                                    <th>
+                                        Grade
+                                    </th>
+
+                                    <?php  
 $query = "SELECT studentdetails.sid, studentdetails.name FROM studentcourse, course_user_master, studentdetails WHERE 
 studentcourse.sid=studentdetails.sid and studentcourse.courseid=course_user_master.courseid and course_user_master.uid=$id";
 
@@ -64,39 +65,71 @@ studentcourse.sid=studentdetails.sid and studentcourse.courseid=course_user_mast
 
 $res = mysqli_query($connection,$query);
 
+$newArray = array();
 
 
-
+$count = 0;
 while($row=mysqli_fetch_assoc($res)){
+    $count = $count+1;
     echo "<tr>";
-    echo "<td>";
+    echo '<td>';
     echo $row["sid"];
     echo "</td>";
     echo "<td>";
     echo $row["name"];
     echo "</td>";
-//    echo "<td>";
-//    echo $row["books_issue_date"];
-//    echo "</td>";
+   echo "<td>";
+   echo "<input type='text' name='$count'";
+   echo "</td>";
 }
-                                    
-                                    ?>
-                                    
-                                    
-                                </table>
-                                
-                                
-                                
-                            </div>
-                            <!--<button type="button" class="btn btn-success">Success</button> -->
+$_SESSION['number'] = $count;
+?>
+</table>
+</div>
+<div style="text-align: center">
+Enter date(yyyy-mm-dd) <input type="text" name="date">
+</div>
+<br>
+<div style="text-align: center">
+Enter Test <input type="text" name="test">
+</div>
+<br>
+    <div style="text-align: center">
+
+        <button type="submit" class="btn btn-success" style="position: absolute;">    Submit
+        </button>
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+</form>
 
+</script>
 
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+require_once("connect.php");
+$query1 = "SELECT studentdetails.sid, studentdetails.name FROM studentcourse, course_user_master, studentdetails WHERE 
+studentcourse.sid=studentdetails.sid and studentcourse.courseid=course_user_master.courseid and course_user_master.uid=$id";
+$res1 = mysqli_query($connection,$query1);
+$k = 1;
+$count = 0;
+While($row=mysqli_fetch_assoc($res1)) {
+        $count = $count +1;
+        $no = $_POST[$count];
+        $date = $_POST["date"];
+        $stud = $row["sid"];
+        $test = $_POST['test'];
+        
+$query = "INSERT INTO assessments (datee,sid,grade,testname) VALUES ('$date',$stud,$no,'$test')";
+        $res = mysqli_query($connection,$query);
+
+    }
+}
+?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

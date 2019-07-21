@@ -1,7 +1,7 @@
 <?php
-	define("DB_HOST", "localhost");
-	define("DB_USER", "root");
-	define("DB_PASSWORD", "");
-	define("DB_DATABASE", "proj");
+	define("SERVER", "localhost");
+	define("USER", "root");
+	define("PASSWORD", "transmode;");
+	define("DB", "project1");
 	
 ?>

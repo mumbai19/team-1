@@ -26,7 +26,7 @@ VALUES ('$name',$phno,'$address','$school','$std');";
 	mysqli_query($conn, $mysql_query);
 	//$retrieve="select * from studentdetails";
 	//$result=$mysqli_query($conn, $retrieve);
-	header('location: student.html');
+	header('location: studentform.html');
 
 	
 	

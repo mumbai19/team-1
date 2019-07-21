@@ -1,7 +1,7 @@
 <?php
 	require "config.php";
 	
-	$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+	$con = mysqli_connect(SERVER, USER, PASSWORD, DB);
 	
 	session_start();
 	
@@ -28,7 +28,7 @@
 			header('location: mentor_mainscreen.php');
 			
 		}else{
-			header('location: mentor_mainscreen');
+			header('location: mentor_mainscreen.php');
 			$_SESSION['username'] = $fetchedUsername;
 		}
 		//echo "Login Successful";

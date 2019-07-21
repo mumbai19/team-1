@@ -13,16 +13,20 @@ $username = $_SESSION['username'];
 	<div class="align">
 		<h1>touching<span>lives</span></h1>
 		<div class="card">
-			<div class="head">
+			<!--<div class="head">
 				<!--<div></div>
 				<a id="login" class="selected" href="#login">View Students</a>
 				<a id="register" href="#register">Add Student</a>
 				<div></div> -->
-				<div>
-				<button onclick="window.location.href='ViewStudents.php'">View Students</button>
+			<div>
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;<button onclick="window.location.href='add_student.php'">View Students</button>
 				</div>
+				<br>
+				<br>
 				<div>
-				<button onclick="window.location.href='AddStudents.php'">Add Students</button>
+				&nbsp;&nbsp;&nbsp;<button onclick="window.location.href='studentform.html'">Add Students</button>
 				</div>
 			</div>
 			<div class="tabs">
@@ -44,15 +48,15 @@ $username = $_SESSION['username'];
 					<button>Login</button>
 				</form> -->
 				
-				<table>
-				<?php
-				require_once("config.php");
-				$username = $_SESSION['username'];
-				$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-$query = "SELECT studentdetails.sid, studentdetails.name FROM student_course, course_user_master, studentdetails WHERE 
-student_course.sid=studentdetails.sid and student_course.courseid=course_user_master.courseid and course_user_master.uid='$username'";
+				<!--<table>
+				//<?php
+				//require_once("config.php");
+				//$username //= $_SESSION['username'];
+				//$con //= //mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+//$query //= "SELECT studentdetails.sid, studentdetails.name FROM student_course, course_user_master, studentdetails WHERE 
+//student_course.sid=studentdetails.sid and student_course.courseid=course_user_master.courseid and course_user_master.uid='$username'";
 
-$result = mysqli_query($con,$query);
+$result //= //mysqli_query($con,$query);
 
 
 				?>
@@ -64,24 +68,24 @@ $result = mysqli_query($con,$query);
 							Student name
 						</th>
 					</tr>
-						<?php
-							if (mysqli_num_rows($result) > 0) {
+						<!--<?php
+							//if (//mysqli_num_rows($result) > 0) {
 									// output data of each row
-									while($row = mysqli_fetch_assoc($result)) {
-						?>
-						<tr>
-							<td><?php echo $row["sid"];?></td>
-							<td><?php echo $row["name"];?></td>
-						</tr>
-						<?php
-							}
-						}
-						?>
+									//while($row = mysqli_fetch_assoc($result)) {
+						//?>
+						//<tr>
+						//	<td><?php //echo $row["sid"];?></td>
+						//	<td><?php //echo $row["name"];?></td>
+						//</tr>
+						//<?php
+							//}
+						//}
+						?>-->
 					
-				</table>
+				<!--</table>-->
 
 				
-				<form>
+				<!--<form>
 					<div class="inputs">
 						<div class="input">
 							<input placeholder="Email" type="text">
@@ -101,7 +105,7 @@ $result = mysqli_query($con,$query);
 						</div>
 					</div>
 					<button>Register</button>
-				</form>
+				</form>-->
 			</div>
 		</div>
 	</div>
